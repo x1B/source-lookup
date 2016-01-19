@@ -11,7 +11,7 @@ Point this script to your source-map to find out the corresponding source locati
 You can install `source-map-lookup` globally:
 
 ```console
-npm install -g source-map-lookup
+> npm install -g source-map-lookup
 ```
 
 
@@ -20,5 +20,7 @@ npm install -g source-map-lookup
 Get the original position for bundle line 23, column 5:
 
 ```console
-source-map-lookup 23:5 path/to/bundle.js.map
+> source-map-lookup 23:5 path/to/bundle.js.map
+Source file: path/to/my-source.js
+Source position: 5:0
 ```
