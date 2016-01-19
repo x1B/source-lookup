@@ -5,7 +5,7 @@
     "url": "http://github.com/x1b/source-lookup.git"
   },
   "author": "Michael Kurze <michael.kurze@rwth-aachen.de>",
-  "version": "0.1.0-pre",
+  "version": "0.2.0-pre",
   "license": "MIT",
   "bin": "bin/source-lookup",
   "dependencies": {
