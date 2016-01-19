@@ -1,4 +1,4 @@
-# Source Map Lookup
+# source-lookup
 
 > Post-mortem analysis of minified JavaScript
 
@@ -8,10 +8,10 @@ Point this script to your source-map to find out the corresponding source locati
 
 ## Installation
 
-You can install `source-map-lookup` globally:
+You can install `source-lookup` globally:
 
 ```console
-> npm install -g source-map-lookup
+> npm install -g source-lookup
 ```
 
 
@@ -20,7 +20,7 @@ You can install `source-map-lookup` globally:
 Get the original position for bundle line 23, column 5:
 
 ```console
-> source-map-lookup 23:5 path/to/bundle.js.map
+> source-lookup 23:5 path/to/bundle.js.map
 Source file: path/to/my-source.js
 Source position: 5:0
 ```
