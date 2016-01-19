@@ -1,0 +1,14 @@
+{
+  "name": "source-map-lookup",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/x1b/source-map-lookup.git"
+  },
+  "author": "Michael Kurze <michael.kurze@23x5.net>",
+  "version": "0.1.0-pre",
+  "license": "MIT",
+  "bin": "bin/source-map-lookup",
+  "dependencies": {
+    "source-map": "~0.5.3"
+  }
+}

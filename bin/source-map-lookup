@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var sourceMap = require( 'source-map' );
+var fs = require( 'fs' );
+
+var args = process.argv.slice( 2 );
+if( args.length < 2 || args[ 0 ] === '--help' ) {
+   console.log( 'Usage: ' + process.argv[ 1 ] + ' [line:column] [source-map-file]' );
+   process.exit( 1 );
+}
+
+var bundleCoords = args[ 0 ].split( ':' );
+var inputFilename = args[ 1 ];
+fs.readFile( inputFilename, undefined, function( undefined, sourceMapBuffer ) {
+
+   var sourceMapData = JSON.parse( sourceMapBuffer.toString() );
+
+   var smc = new sourceMap.SourceMapConsumer( sourceMapData );
+
+   var line = parseInt( bundleCoords[ 0 ], 10 );
+   var column = parseInt( bundleCoords[ 1 ] || '0', 10 );
+   var pos = { line: line, column: column }
+
+   var sourcePos = smc.originalPositionFor( pos );
+
+   console.log( 'Source file: ' + sourcePos.source );
+   console.log( 'Source position: ' + sourcePos.line + ':' + sourcePos.column );
+
+} );
